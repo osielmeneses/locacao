@@ -1,0 +1,18 @@
+package br.edu.infnet.locacao.model.domain;
+
+public class Moto extends Veiculo{
+
+	private int pontencia;
+	
+	public Moto(String placa, String modelo, float valorDiaria, long quilometragem) {
+		super(placa, modelo, valorDiaria, quilometragem);
+	}
+
+	public int getPontencia() {
+		return pontencia;
+	}
+
+	public void setPontencia(int pontencia) {
+		this.pontencia = pontencia;
+	}
+}

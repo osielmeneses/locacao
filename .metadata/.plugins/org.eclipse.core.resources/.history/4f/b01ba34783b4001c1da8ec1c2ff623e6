@@ -1,0 +1,49 @@
+package br.edu.infnet.locacao.model.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.time.LocalDateTime;
+import java.time.Month;
+
+import br.edu.infnet.locacao.model.domain.Carro;
+import br.edu.infnet.locacao.model.domain.Cliente;
+import br.edu.infnet.locacao.model.domain.Locacao;
+import br.edu.infnet.locacao.model.domain.Veiculo;
+
+public class LocacaoTeste {
+
+	public static void main(String[] args) {
+		
+		List<Veiculo> veiculos = new ArrayList<Veiculo>();
+		
+		
+		Locacao locacao = new Locacao();
+		locacao.setDescricao("Teste locação veículos");
+		locacao.setLocalRetirada("Rio de Janeiro - Tijuca");
+		locacao.setLocalDevolucao("Rio de Janeiro - Aeroporto");
+		locacao.setDataRetirada(LocalDateTime.of(2022, Month.APRIL, 20, 12, 30));
+		locacao.setDataDevolucao(LocalDateTime.of(2022, Month.APRIL, 30, 12, 30));
+		
+		long valorTotal = 0;
+		
+		for (int i = 0; i < 5; i++) {
+			Carro veiculo = new Carro("KVW9393" + i, "Fiat Pálio", 10 + i, 100);
+			veiculos.add(veiculo);
+			valorTotal += veiculo.calcularValorTotal(locacao.getDataRetirada(), locacao.getDataDevolucao());
+		}
+		
+		Cliente cliente = new Cliente("Osiel Meneses", "199988899", "02566688509", "21979172555", "osielmeneses@gmail.com");
+		
+		
+		locacao.setLocacaoWeb(true);
+		locacao.setVeiculos(veiculos);
+		locacao.setCliente(cliente);
+		locacao.setValorLocacao(valorTotal);
+		locacao.getValorLocacao();
+		System.out.println(locacao);
+		
+		System.out.println(cliente);
+		
+		System.out.println(veiculos);
+	}
+}

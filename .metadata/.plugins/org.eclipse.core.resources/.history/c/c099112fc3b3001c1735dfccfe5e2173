@@ -1,0 +1,10 @@
+package br.edu.infnet.locacao.model.domain;
+
+public abstract class Veiculo {
+	
+	private Integer id;
+	private String placa;
+	private float valorDiaria;
+	private LocalDateTime AnoFabricacao;
+	private LocalDateTime AnoModelo;
+}

@@ -1,0 +1,13 @@
+package br.edu.infnet.locacao.model.test;
+
+import br.edu.infnet.locacao.model.domain.Carro;
+
+public class VeiculoTeste {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Carro carro = new Carro()
+	}
+
+}

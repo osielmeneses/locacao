@@ -1,0 +1,19 @@
+package br.edu.infnet.locacao.model.test;
+
+//import br.edu.infnet.locacao.model.domain.Cliente;
+import br.edu.infnet.locacao.model.domain.Locacao;
+
+public class LocacaoTeste {
+
+	public static void main(String[] args) {
+		
+		//Cliente cliente = new Cliente("Osiel Meneses", "02566688509", "21979172555", "osielmeneses@gmail.com");
+		
+		Locacao locacao = new Locacao();
+		locacao.setDescricao("Teste locação veículos");
+		locacao.setLocacaoWeb(true);
+		//locacao.setVeiculos(null);
+		//locacao.setCliente(null);
+		System.out.println(locacao);
+	}
+}

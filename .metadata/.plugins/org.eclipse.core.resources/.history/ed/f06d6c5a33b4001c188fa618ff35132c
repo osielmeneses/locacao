@@ -1,0 +1,35 @@
+package br.edu.infnet.locacao.model.test;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import br.edu.infnet.locacao.model.domain.Carro;
+import br.edu.infnet.locacao.model.domain.Cliente;
+import br.edu.infnet.locacao.model.domain.Locacao;
+import br.edu.infnet.locacao.model.domain.Veiculo;
+
+public class LocacaoTeste {
+
+	public static void main(String[] args) {
+		
+		List<Veiculo> veiculos = new ArrayList<Veiculo>();
+		
+		for (int i = 0; 2 < args.length; i++) {
+			Carro veiculo = new Carro("KVW9393", 10, 2020,2021);
+			veiculos.add(veiculo);
+		}
+		
+		
+		
+		Cliente cliente = new Cliente("Osiel Meneses", "02566688509", "21979172555", "osielmeneses@gmail.com");
+		
+		Locacao locacao = new Locacao();
+		locacao.setDescricao("Teste locação veículos");
+		locacao.setLocacaoWeb(true);
+		locacao.setVeiculos(veu);
+		locacao.setCliente(cliente);
+		System.out.println(locacao);
+	}
+}

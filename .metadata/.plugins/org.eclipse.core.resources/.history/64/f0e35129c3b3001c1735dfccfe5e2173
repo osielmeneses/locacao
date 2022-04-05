@@ -1,0 +1,5 @@
+package br.edu.infnet.locacao.model.domain;
+
+public abstract class Veiculo {
+
+}

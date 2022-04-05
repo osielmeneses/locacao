@@ -1,0 +1,13 @@
+package br.edu.infnet.locacao.model.test;
+
+import br.edu.infnet.locacao.model.domain.Moto;
+
+public class MotoTeste {
+
+	public static void main(String[] args) {
+		
+		Moto moto = new Moto("KVW9393", "Moto Yamaha", 10, 100);
+		moto.setPontencia(150);
+		System.out.println(moto);
+	}
+}

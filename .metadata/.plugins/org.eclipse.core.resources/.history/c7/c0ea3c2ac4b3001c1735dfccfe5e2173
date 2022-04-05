@@ -1,0 +1,12 @@
+package br.edu.infnet.locacao.model.domain;
+
+import java.time.LocalDateTime;
+
+public abstract class Veiculo {
+	
+	private Integer id;
+	private String placa;
+	private float valorDiaria;
+	private LocalDateTime AnoFabricacao;
+	private LocalDateTime AnoModelo;
+}

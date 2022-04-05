@@ -1,0 +1,5 @@
+package br.edu.infnet.locacao.model.service;
+
+public class CarroService {
+
+}

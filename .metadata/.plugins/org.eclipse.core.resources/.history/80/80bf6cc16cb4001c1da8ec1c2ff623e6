@@ -1,0 +1,22 @@
+package br.edu.infnet.locacao.model.test;
+
+import br.edu.infnet.locacao.model.domain.Carro;
+import br.edu.infnet.locacao.model.domain.Moto;
+
+public class VeiculoTeste {
+
+	public static void main(String[] args) {
+		
+		Carro carro = new Carro("KVW9393", "Fiat Pálio", 10, 100);
+		carro.setArCondicionado(true);
+		carro.setArQuente(true);
+		carro.setCambioAutomatico(false);
+		carro.setTravaEletrica(true);
+		carro.setDirecaoHidraulica(true);
+		carro.setNumeroPortas(5);
+		System.out.println(carro);
+		
+		Moto moto = new Moto("KVW9393", "Moto Yamaha", 10, 100);
+		moto.setPontencia(150);
+	}
+}

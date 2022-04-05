@@ -1,0 +1,95 @@
+package br.edu.infnet.locacao.model.domain;
+
+public abstract class Veiculo {
+	
+	private Integer id;
+	private String placa;
+	private String modelo;
+	private float valorDiaria;
+	private int anoFabricacao;
+	private int anoModelo;
+	private long quilometragem;
+	
+	
+	public Veiculo(String placa, String modelo, float valorDiaria, int anoFabricacao, int anoModelo, long quilometragem) {
+		this.placa = placa;
+		this.modelo = modelo;
+		this.valorDiaria = valorDiaria;
+		this.anoFabricacao = anoFabricacao;
+		this.anoModelo = anoModelo;
+	}
+	
+	public abstract float calcularValorLocacao();
+
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(nome);
+		sb.append(";");
+		sb.append(valor);
+		sb.append(";");
+		sb.append(codigo);
+		sb.append(";");
+		sb.append(calcularValorLocacao());
+		
+		return sb.toString();
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
+	public float getValorDiaria() {
+		return valorDiaria;
+	}
+
+	public void setValorDiaria(float valorDiaria) {
+		this.valorDiaria = valorDiaria;
+	}
+
+	public int getAnoFabricacao() {
+		return anoFabricacao;
+	}
+
+	public void setAnoFabricacao(int anoFabricacao) {
+		this.anoFabricacao = anoFabricacao;
+	}
+
+	public int getAnoModelo() {
+		return anoModelo;
+	}
+
+	public void setAnoModelo(int anoModelo) {
+		this.anoModelo = anoModelo;
+	}
+
+	public long getQuilometragem() {
+		return quilometragem;
+	}
+
+	public void setQuilometragem(long quilometragem) {
+		this.quilometragem = quilometragem;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+}

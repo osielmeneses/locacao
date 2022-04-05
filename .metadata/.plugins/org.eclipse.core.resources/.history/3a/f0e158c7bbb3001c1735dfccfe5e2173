@@ -1,0 +1,16 @@
+package br.edu.infnet.locacao.model.domain;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public class Locacao {
+
+	private String descricao;
+	private LocalDateTime data;
+	private List<Veiculo> veiculos;
+	private Cliente cliente;
+	
+	public Locacao() {
+		data = LocalDateTime.now();
+	}
+}

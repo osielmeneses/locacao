@@ -1,0 +1,13 @@
+package br.edu.infnet.locacao.model.test;
+
+import br.edu.infnet.locacao.model.domain.Locacao;
+
+public class LocacaoTeste {
+
+	public static void main(String[] args) {
+		Locacao locacao = new Locacao();
+		locacao.setDescricao("Teste locação veículos");
+		locacao.setLocacaoWeb(true);
+		System.out.println(locacao);
+	}
+}
