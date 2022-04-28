@@ -1,6 +1,5 @@
 package br.edu.infnet.locacao.model.domain;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -59,11 +58,10 @@ public class Locacao {
 	}
 	
 	public String getDescricao() {
+		if(descricao != null)
+			return descricao;
+		
 		for (Veiculo veiculo : veiculos) {
-			if (descricao == null) {
-				descricao = veiculo.getModelo();
-				continue;
-			}
 			descricao += " | " + veiculo.getModelo() ;
 		}	
 		
