@@ -1,7 +1,9 @@
 package br.edu.infnet.locacao.model.test;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 import br.edu.infnet.locacao.model.domain.Carro;
 
@@ -9,8 +11,9 @@ public class CarroTeste {
 
 	public static void main(String[] args) {
 		
-		LocalDateTime dataInicio = LocalDateTime.of(2022, Month.APRIL, 20, 12, 30);
-		LocalDateTime dataFim = LocalDateTime.of(2022, Month.APRIL, 30, 12, 30);
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate  dataInicio = LocalDate.parse("10/05/2022", df);
+		LocalDate  dataFim = LocalDate.parse("15/05/2022", df);
 		
 		Carro carro = new Carro("KVW9393", "Fiat Pálio", 10, 100);
 		carro.setArCondicionado(true);

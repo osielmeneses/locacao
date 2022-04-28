@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sistena Locação Veículos</title>
+<title>Sistema Locação Veículos</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-	<h3>Osiel Meneses</h3>
-	<h4>AppLocacao: sistema para locação de veículos</h4>
-
-	<h5>
-		<a href="/carros">Cadastramento de carros</a>
-	</h5>
+<c:import url="/WEB-INF/jsp/menu.jsp"/>	  
+	<div class="container">
+		<h4>sistema para locação de veículos</h4>
+    </div>
 </body>
 </html>

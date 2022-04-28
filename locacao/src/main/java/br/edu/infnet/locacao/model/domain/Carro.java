@@ -1,8 +1,12 @@
 package br.edu.infnet.locacao.model.domain;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Carro extends Veiculo {
 
 	private boolean arCondicionado;
@@ -12,6 +16,10 @@ public class Carro extends Veiculo {
 	private boolean direcaoHidraulica;
 	private int numeroPortas;
 
+	public Carro() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Carro(String placa, String modelo, float valorDiaria, long quilometragem) {
 		super(placa, modelo, valorDiaria, quilometragem);
 	}
@@ -77,7 +85,7 @@ public class Carro extends Veiculo {
 	}
 
 	@Override
-	public float calcularValorTotal(LocalDateTime dataInicial, LocalDateTime dataFinal) {
+	public float calcularValorTotal(LocalDate dataInicial, LocalDate dataFinal) {
 		long dias = dataInicial.until(dataFinal, ChronoUnit.DAYS); 
 		return (dias * getValorDiaria());
 	}	
