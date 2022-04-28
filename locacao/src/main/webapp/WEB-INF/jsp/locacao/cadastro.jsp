@@ -18,7 +18,7 @@
 
 	    <div class="mb-3 mt-3">
 	      <label>Cliente:</label>
-	      <select name="solicitante.id" class="form-control">
+	      <select name="cliente.id" class="form-control">
 	      		<c:forEach var="s" items="${clientes}">
 	      			<option value="${s.id}">${s.nome}</option>
 	      		</c:forEach>
@@ -36,7 +36,6 @@
 	    
 	    <div class="mb-3 mt-3">
 	      <label>Data da Retirada:</label>
-	      <fmt:formatDate pattern="dd/MM/yyyy HH:mm:ss" value="${calculo.dataSimulacao}" />
 	      
 	      <input type="text" class="form-control" placeholder="Entre com a data da retirada do veículo"  name="dataRetirada" value="01/09/2022">
 	    </div>
