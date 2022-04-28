@@ -61,6 +61,7 @@ public class Locacao {
 		if(descricao != null)
 			return descricao;
 		
+		descricao = "";
 		for (Veiculo veiculo : veiculos) {
 			descricao += " | " + veiculo.getModelo() ;
 		}	
